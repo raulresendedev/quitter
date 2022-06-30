@@ -1,0 +1,318 @@
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('./fonts/FredokaOne-Regular.ttf')  format('truetype');
+  }
+
+html, body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #ccffd8;
+    background: rgb(194,245,206);
+    background: linear-gradient(325deg, rgba(194,245,206,1) 4%, rgba(181,230,249,1) 90%);
+    font-family: Arial, Helvetica, sans-serif;
+}
+body > *{
+    z-index: 0;
+}
+.tela{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 2fr 4fr 2fr;
+    grid-template-rows: 1fr 6fr 1fr;
+    position: relative;
+}
+.telaHeader{
+    grid-column-start: 2;
+    grid-row-start: 1;
+    background-color: #92F29B;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Bebas Neue';
+}
+h1, h2{
+    font-size: 3rem;
+}
+p{
+    font-size: 1.5rem;
+}
+.telaSection{
+    grid-column-start: 2;
+    grid-row-start: 2;
+    background-color: transparent;
+    justify-content: stretch;
+    position: relative;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+}
+#elementContainer{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-y:auto;
+}
+.telaFooter{
+    grid-column-start: 2;
+    grid-row-start: 3;
+    background-color: #92F29B;
+    z-index: 2;
+    display: flex;
+    justify-content: space-evenly;
+}
+.telaFooter > img{
+    width: 65px;
+    height: 65px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.aporte{
+    margin-top: auto;
+    border-radius: 10px;
+    width: 70%;
+    height: fit-content;
+    min-height: max-content;
+    background-color: #A9FFBE;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.aporte > div{
+    display: flex;
+    justify-content: space-between;
+    padding: 1vh;
+    padding-left: 2vh;
+    font-size: 1rem;
+    margin-top: 1vh;
+}
+.aporte > div:nth-child(2){
+    border-style:  solid hidden hidden hidden;
+    border-width: 2px;
+    padding-left: 2vh;
+    margin-bottom: 1vh;
+}
+#containerBotao{
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 80%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /*visibility: hidden;
+    position: absolute;*/ 
+}
+.telaExtrato{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 15%;
+    background-color: white;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    z-index: 1;
+    border-radius: 50px 50px 0 0;
+    display: flex;
+    box-shadow: 0px 0px 5px 0px #969696;
+}
+.telaExtrato > div{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    border-style: hidden hidden solid hidden;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.3);
+}
+#extrato{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#extrato > *{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logoExtrato{
+    background-color: black;
+}
+
+#seta {
+    width: 50px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.on {
+    -webkit-animation-name: on;
+    -webkit-animation-duration: .5s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-fill-mode: forwards;
+  }
+.off{
+    -webkit-animation-name: off;
+    -webkit-animation-duration: .5s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-fill-mode: forwards;
+}
+
+#calendario{
+    width: 60px;
+    height: 60px;
+}
+#editarAporte{
+    width: 120px;
+    height: 60px;
+    background-color: #007BAB;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#editarAporte > p{
+    align-self: center;
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+#last{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@-webkit-keyframes on {
+    from {
+        height: 15%;
+    }
+    to {
+      height: 98%;
+    }
+  }
+@-webkit-keyframes off {
+    from {
+        height: 98%;
+    }
+    to {
+      height: 15%;
+    }
+  }
+@media screen and (max-width: 1400px){
+    h1, h2{
+        font-size: 2rem;
+    }
+    p{
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width: 730px){
+    h1, h2{
+        font-size: 2rem;
+    }
+    p{
+        font-size: 1rem;
+    }
+    .tela{
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 4fr;
+        grid-template-rows: 1fr 6fr 1fr;
+        position: relative;
+    }
+    .telaHeader{
+        grid-column-start: 1;
+        grid-row-start: 1;
+        background-color: #92F29B;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .telaSection{
+        grid-column-start: 1;
+        grid-row-start: 2;
+        justify-content: stretch;
+        position: relative;
+        background: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    
+    }
+    .telaFooter{
+        grid-column-start: 1;
+        grid-row-start: 3;
+        background-color: #92F29B;
+        z-index: 2;
+    }
+    .aporte{
+        margin-top: auto;
+        border-radius: 10px;
+        width: 80%;
+        height: fit-content;
+        background-color: #A9FFBE;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /*visibility: hidden;
+        position: absolute;*/ 
+    }
+}
+@media screen and (max-width: 1000px) and (min-height: 800px){
+    .tela{
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 4fr;
+        grid-template-rows: 1fr 6fr 1fr;
+        position: relative;
+    }
+    .telaHeader{
+        grid-column-start: 1;
+        grid-row-start: 1;
+        background-color: #92F29B;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .telaSection{
+        grid-column-start: 1;
+        grid-row-start: 2;
+        justify-content: stretch;
+        position: relative;
+        background: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    
+    }
+    .telaFooter{
+        grid-column-start: 1;
+        grid-row-start: 3;
+        background-color: #92F29B;
+        z-index: 2;
+    }
+    .aporte{
+        margin-top: auto;
+        border-radius: 10px;
+        width: 70%;
+        height: fit-content;
+        background-color: #A9FFBE;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /*visibility: hidden;
+        position: absolute;*/ 
+    }
+}

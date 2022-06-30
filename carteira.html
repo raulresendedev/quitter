@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="URF-8">
+    <title>Carteira</title>
+    <link href="./css/reset.css" rel="stylesheet">
+    <link href="./css/carteira.css" rel="stylesheet">
+    <link rel="icon" href="./css/assets/icon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <main class="tela">
+        <header class="telaHeader">
+            <h1>CARTEIRA</h1>
+            <h2>R$220,70</h2>
+        </header>
+        
+        <section class="telaSection">
+            <div id="elementContainer">
+                <div class="aporte">
+                    <div>
+                        <p>GASTO DA SEMANA</p>
+                        <p>R$ 79,30</p>
+                    </div>
+                    <div>
+                        <p>LIMITE</p>
+                        <p>R$ 100,00</p>
+                    </div>
+                </div>
+                <div class="aporte">
+                    <div>
+                        <p>GASTO DO MÊS</p>
+                        <p>R$ 179,30</p>
+                    </div>
+                    <div>
+                        <p>LIMITE</p>
+                        <p>R$ 400,00</p>
+                    </div>
+                </div>
+                <div class="aporte">
+                    <div>
+                        <p>GASTO SUGERIDO POR DIA</p>
+                        <p>R$ 10,35</p>
+                    </div>
+                    <div>
+                        <p id="last">RESTAM 2 DIAS NESTA SEMANA</p>
+                    </div>
+                </div>
+                <div id="containerBotao">
+                    <img src="./css/assets/calendario.ico" rel="Calendario" id="calendario">
+                    <div id="editarAporte">
+                        <p>EDITAR</p>
+                        <p>APORTES</p>
+                    </div>
+                </div>
+            </div>
+            <div class="telaExtrato inicial" id="extrato">
+                <div>
+                    <img src="./css/assets/seta.ico" id="seta" onclick="ani()" value="Click">
+                </div>
+                <div>
+                    <img src="./css/assets/wallet.png">
+                    <p>R$ 30,00</p>
+                    <p>Venda de Camiseta</p>
+                    <p>12/02/2022</p>
+                </div>
+            </div>
+        </section>
+        <footer class="telaFooter">
+            <img src="./css/assets/wallet.png" rel="Carteira">
+            <img src="./css/assets/lock.png" rel="Cofre">
+            <img src="./css/assets/lock.png" rel="Add">
+            <img src="./css/assets/lock.png" rel="Objetivos">
+            <img src="./css/assets/lock.png" rel="Conta">
+        </footer>
+    </main>
+    <script src="./scripts/carteira.js"></script>
+</body>
+</html>
